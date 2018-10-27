@@ -1,0 +1,185 @@
+.linear-gradient-top(@default,@color1,@stop1,@color2,@stop2) {
+    background-color: @default;
+    background-image: linear-gradient(
+        to bottom,
+        @color1 @stop1,
+        @color2 @stop2
+    );
+}
+
+.linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,@color3,@stop3) {
+    background-color: @default;
+    background-image: linear-gradient(
+        to bottom,
+        @color1 @stop1,
+        @color2 @stop2,
+        @color3 @stop3
+    );
+}
+
+.page-mixin {
+    width: 750px;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: auto;
+}
+
+.ht-mask-mixin {
+    .page-mixin;
+    background-color: #000;
+    .fadeOutUpTmp;
+    .animated(2s);
+}
+
+.dialog-wrapper-mixin {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(200, 200, 200, 0.2);
+}
+
+.logo-mixin {
+    .middle-mixin;
+    bottom: 35px;
+}
+
+.center-mixin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.middle-mixin {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.border-mixin {
+    border: 1px solid #fff;
+    border-radius: 25px;
+}
+
+.input-mixin {
+    font-size: 28px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    -webkit-appearance: none;
+    box-shadow: 1px 1px 2px #234400;
+}
+
+.btn-mixin {
+    display: block;
+    .btn {
+        padding: 10px 20px;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        line-height: 45px;
+        font-size: 26px;
+        color: black;
+        .border-mixin;
+        color: white;
+    }
+}
+
+.info-mixin {
+    .name {
+        font-size: 38px;
+        color: @super-dark-green;
+        display: inline-block;
+        padding-right: 25px;
+        margin: 0;
+        vertical-align: bottom;
+    }
+    .meta {
+        display: inline;
+        color: @dark-green;
+        font-size: 22px;
+    }
+    .desc {
+        font-size: 22px;
+        color: @super-dark-green;
+        margin-top: 10px;
+        label {
+            width: 100px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: right;
+            margin-right: 10px;
+        }
+        p {
+            display: inline-block;
+            vertical-align: top;
+            width: 260px;
+            margin: 0;
+            word-break: break-word;
+        }
+    }
+}
+
+.share-mixin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background: @main-green;
+    width: 100%;
+    height: 100%;
+}
+
+.img-view-wrapper-mixin {
+    display: block;
+    height: 582px;
+    width: 564px;
+    box-sizing: border-box;
+    position: relative;
+
+    .img-view {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        border: 1px solid @dark-green;
+        float: left;
+        margin: 0px 13px 25px 13px;
+
+        .btn-img-view {
+            position: relative;
+            overflow: hidden;
+            width: 160px;
+            height: 160px;
+            .btn {
+                display: block;
+                img {
+                    width: 100%;
+                    .center-mixin;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    position: fixed;
+    bottom: -4px;
+    width: 100%;
+
+    .btn-wrapper {
+        display: inline-block;
+        .btn {
+            display: inline-block;
+        }
+        .animated(1s);
+        .bounce;
+    }
+}

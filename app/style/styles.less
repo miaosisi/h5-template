@@ -1,0 +1,60 @@
+@import "sp-misc.less";
+@import "variables.less";
+@import "animation.less";
+@import "mixins.less";
+
+//component
+@import "loading.less";
+
+// custom styles
+@import "start.less";
+
+body {
+    margin: 0;
+    font-family: @font-family;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.wrapper {
+    height: 100%;
+    .loading {
+        .page-mixin;
+        background-image: url("../img/example.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        .loading-progress {
+            color: white;
+            font-size: 54px;
+            text-align: center;
+            position: relative;
+            top: 550px;
+        }
+        .loading-text {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            position: relative;
+            top: 565px;
+        }
+    }
+}
+
+.bg-music {
+    &.bg-on {
+        .sprite(@sound-1);
+    }
+    &.bg-off {
+        .sprite(@sound-0);
+    }
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    z-index: 101;
+}
+
+.error {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 100px;
+}

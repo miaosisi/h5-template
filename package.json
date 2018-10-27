@@ -1,0 +1,71 @@
+{
+  "name": "nongfuspring-invitation",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "test": "gulp test",
+    "prebuild": "npm install",
+    "prestart": "npm install",
+    "pretest": "npm install"
+  },
+  "author": "Ramytech",
+  "devDependencies": {
+    "browser-sync": "~2.5.3",
+    "browserify": "^9.0.3",
+    "browserify-shim": "^3.8.10",
+    "connect-modrewrite": "^0.8.2",
+    "del": "^1.1.1",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-csso": "^1.0.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-less": "^3.0.1",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-qn": "^0.1.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-rev-collector": "^1.0.3",
+    "gulp-rev-qn": "^1.0.4",
+    "gulp-scp2": "^0.2.0",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "latest",
+    "gulp-util": "^3.0.4",
+    "gulp.spritesmith": "^3.5.3",
+    "gulp.spritesmith-multi": "^3.0.0",
+    "lodash.assign": "^3.0.0",
+    "reactify": "latest",
+    "run-sequence": "^1.1.5",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.1.0"
+  },
+  "dependencies": {
+    "classnames": "^1.2.2",
+    "formsy-react": "^0.14.1",
+    "gulp": "^3.9.1",
+    "immutable": "^3.6.4",
+    "jquery": "^2.1.4",
+    "keymirror": "^0.1.1",
+    "lodash": "^3.5.0",
+    "react": "^0.13.3",
+    "react-radio-group": "^2.2.0",
+    "react-router": "^0.13.5",
+    "react-select": "^0.6.12",
+    "react-wechat": "git+ssh://git@github.com:miaosisi/react-wechat.git",
+    "reflux": "^0.3.0",
+    "store2": "^2.3.2"
+  },
+  "peerDependencies": {
+    "gulp": "*"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
+  }
+}

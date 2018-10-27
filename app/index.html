@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-framework="react">
+
+<head>
+    <title>h5标题</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true">
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src='./rain.js'></script> -->
+    <script type="text/javascript">
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            var phoneScale = parseInt(window.screen.width) / 750;
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                document.write(
+                    '<meta name="viewport" content="width=750, minimum-scale= '
+                    + phoneScale +
+                    ', maximum-scale = '
+                    + phoneScale +
+                    ', initial-scale = '
+                    + phoneScale +
+                    ', target-densitydpi=device-dpi, user-scalable=0">'
+                );
+            } else {
+                document.write(
+                    '<meta name="viewport" content="width=750, target-densitydpi=device-dpi">'
+                );
+            }
+        } else {
+            document.write(
+                '<meta name="viewport"'
+                + ' content="width=750, user-scalable=no, target-densitydpi=device-dpi">'
+            );
+        }
+    </script>
+    <link rel="stylesheet" href="./style/styles.css">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+</head>
+
+<body>
+    <section id="app"></section>
+    <script src="./bundle.js" type="text/javascript"></script>
+    <script>
+        document.getElementsByClassName('bg-audio')[0].play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            document.getElementsByClassName('bg-audio')[0].play();
+        }, false);
+    </script>
+
+
+</body>
+
+</html>
